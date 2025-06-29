@@ -2,50 +2,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thumbfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ThumbFolio | Sandip Gurung's YouTube Thumbnails</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
 </head>
 <body class="light">
-  <header>
-    <h1>🎨 Sandip Gurung's Thumbnails</h1>
-    <button id="toggleMode">🌙</button>
-  </header>
 
-  <nav>
-    <button data-filter="all">All</button>
-    <button data-filter="vlog">Vlog</button>
-    <button data-filter="gaming">Gaming</button>
-    <button data-filter="music">Music</button>
-    <button data-filter="podcast">Podcast</button>
-  </nav>
+<header>
+  <h1 class="main-title">
+    🎨 ThumbFolio — Sandip Gurung's YouTube Thumbnails
+  </h1>
+  <p class="tagline">Your personal thumbnail portfolio, crafted with passion.</p>
+  <button id="toggleMode" aria-label="Toggle dark mode">🌙</button>
+</header>
 
-  <main id="gallery">
-    <div class="thumb-card" data-category="vlog">
-      <img src="assets/thumb1.jpg" alt="Vlog Thumbnail" />
-    </div>
-    <div class="thumb-card" data-category="gaming">
-      <img src="assets/thumb2.jpg" alt="Gaming Thumbnail" />
-    </div>
-    <div class="thumb-card" data-category="music">
-      <img src="assets/thumb3.jpg" alt="Music Thumbnail" />
-    </div>
-    <div class="thumb-card" data-category="podcast">
-      <img src="assets/thumb4.jpg" alt="Podcast Thumbnail" />
-    </div>
-    <!-- Add more cards here -->
-  </main>
+<nav>
+  <button data-filter="all">All</button>
+  <button data-filter="vlog">Vlog</button>
+  <button data-filter="gaming">Gaming</button>
+  <button data-filter="music">Music</button>
+  <button data-filter="podcast">Podcast</button>
+  <button data-filter="documentary">Documentary</button>
+  <button data-filter="tutorial">Tutorial</button>
+  <button data-filter="comedy">Comedy</button>
+</nav>
 
-  <footer>
-    <p>Made with by Sandipeyy</p>
-    <div class="socials">
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">GitHub</a>
-    </div>
-  </footer>
+<main id="gallery">
+  <div class="thumb-card" data-category="vlog">
+    <img src="assets/vlog/vlog1.jpg" alt="Vlog Thumbnail 1" />
+  </div>
+  <div class="thumb-card" data-category="vlog">
+    <img src="assets/vlog/vlog2.jpg" alt="Vlog Thumbnail 2" />
+  </div>
+  <div class="thumb-card" data-category="gaming">
+    <img src="assets/gaming/gaming1.jpg" alt="Gaming Thumbnail 1" />
+  </div>
+  <div class="thumb-card" data-category="gaming">
+    <img src="assets/gaming/gaming2.jpg" alt="Gaming Thumbnail 2" />
+  </div>
+  <div class="thumb-card" data-category="music">
+    <img src="assets/music/music1.jpg" alt="Music Thumbnail 1" />
+  </div>
+  <div class="thumb-card" data-category="podcast">
+    <img src="assets/podcast/podcast1.jpg" alt="Podcast Thumbnail 1" />
+  </div>
+  <div class="thumb-card" data-category="documentary">
+    <img src="assets/documentary/documentary1.jpg" alt="Documentary Thumbnail 1" />
+  </div>
+  <div class="thumb-card" data-category="tutorial">
+    <img src="assets/tutorial/tutorial1.jpg" alt="Tutorial Thumbnail 1" />
+  </div>
+  <div class="thumb-card" data-category="comedy">
+    <img src="assets/comedy/comedy1.jpg" alt="Comedy Thumbnail 1" />
+  </div>
+</main>
 
-  <script src="app.js"></script>
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Hi! I’m Sandip Gurung, a passionate YouTube thumbnail designer specializing in creating eye-catching thumbnails that grab attention and boost clicks. With a knack for color, composition, and style, I help content creators bring their videos to life visually.
+  </p>
+</section>
+
+<section id="testimonials">
+  <h2>Testimonials</h2>
+  <div class="testimonial-slider">
+    <div class="testimonial">
+      <p>"Sandip’s thumbnails gave my channel a huge boost! Professional and creative."</p>
+      <h4>— Anil K.</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Great design sense and fast delivery. Highly recommended!"</p>
+      <h4>— Priya S.</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Really understands YouTube trends and makes thumbnails pop."</p>
+      <h4>— Raj M.</h4>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form
+    id="contactForm"
+    action="https://formspree.io/f/xeokavoz"
+    method="POST"
+    novalidate
+  >
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required placeholder="Your name" />
+
+    <label for="email">Email</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      required
+      placeholder="your.email@example.com"
+    />
+
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      required
+      placeholder="Write your message here..."
+    ></textarea>
+
+    <!-- Spam protection -->
+    <input type="text" name="_gotcha" style="display:none" />
+
+    <button type="submit">Send Message</button>
+    <p id="formMessage" role="alert" aria-live="polite"></p>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Sandip Gurung — All rights reserved.</p>
+  <div class="socials">
+    <a href="#" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+    <a href="#" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+    <a href="#" aria-label="GitHub" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+
 </body>
 </html>
