@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thumbfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+</head>
+<body class="light">
+  <header>
+    <h1>🎨 Sandip Gurung's Thumbnails</h1>
+    <button id="toggleMode">🌙</button>
+  </header>
+
+  <nav>
+    <button data-filter="all">All</button>
+    <button data-filter="vlog">Vlog</button>
+    <button data-filter="gaming">Gaming</button>
+    <button data-filter="music">Music</button>
+    <button data-filter="podcast">Podcast</button>
+  </nav>
+
+  <main id="gallery">
+    <div class="thumb-card" data-category="vlog">
+      <img src="assets/thumb1.jpg" alt="Vlog Thumbnail" />
+    </div>
+    <div class="thumb-card" data-category="gaming">
+      <img src="assets/thumb2.jpg" alt="Gaming Thumbnail" />
+    </div>
+    <div class="thumb-card" data-category="music">
+      <img src="assets/thumb3.jpg" alt="Music Thumbnail" />
+    </div>
+    <div class="thumb-card" data-category="podcast">
+      <img src="assets/thumb4.jpg" alt="Podcast Thumbnail" />
+    </div>
+    <!-- Add more cards here -->
+  </main>
+
+  <footer>
+    <p>Made with by Sandipeyy</p>
+    <div class="socials">
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">GitHub</a>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
