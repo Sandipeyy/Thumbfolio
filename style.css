@@ -1,73 +1,94 @@
-body {
+/* Basic Reset */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  transition: background 0.3s, color 0.3s;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.light {
-  --bg: #f5f5f5;
-  --text: #222;
-  --card-bg: rgba(255, 255, 255, 0.6);
+/* Body and fonts */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: #f0f2f5;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 20px;
 }
 
-.dark {
-  --bg: #111;
-  --text: #f5f5f5;
-  --card-bg: rgba(0, 0, 0, 0.5);
+body.dark {
+  background: #121212;
+  color: #eee;
 }
 
+/* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  backdrop-filter: blur(10px);
-  background: var(--card-bg);
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
+.main-title {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+#toggleMode {
+  margin-top: 0.7rem;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  background: #4c51bf;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Navigation */
 nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 nav button {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 50px;
-  background: #0f0f0f;
+  background: #4c51bf;
   color: white;
+  border: none;
+  margin: 0 0.3rem 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 25px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: background 0.3s;
 }
 
-nav button:hover {
-  background: #444;
+nav button:hover,
+nav button.active {
+  background: #2c3a87;
 }
 
-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem;
+/* Gallery */
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
 .thumb-card {
-  background: var(--card-bg);
-  backdrop-filter: blur(20px);
-  border-radius: 20px;
+  flex: 0 0 200px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  transform: perspective(800px) rotateY(0deg);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(76,81,191,0.2);
+  cursor: pointer;
+  transition: transform 0.3s;
+  background: white;
 }
 
 .thumb-card:hover {
-  transform: perspective(800px) rotateY(5deg) scale(1.05);
+  transform: scale(1.05);
 }
 
 .thumb-card img {
@@ -75,15 +96,118 @@ main {
   display: block;
 }
 
+/* Sections */
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+body.dark section {
+  background: #1e1e1e;
+  box-shadow: none;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Testimonials */
+.testimonial-slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.testimonial {
+  flex: 0 0 280px;
+  background: #f4f6ff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(76,81,191,0.2);
+  font-style: italic;
+}
+
+body.dark .testimonial {
+  background: #292929;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+form label {
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #4c51bf;
+  outline: none;
+}
+
+form button {
+  background: #4c51bf;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #2c3a87;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 2rem;
+  margin: 3rem 0 1rem;
   font-size: 0.9rem;
+  color: #555;
+}
+
+body.dark footer {
+  color: #bbb;
 }
 
 footer .socials a {
-  margin: 0 10px;
+  margin: 0 0.7rem;
   text-decoration: none;
-  color: var(--text);
-  font-weight: bold;
+  color: #4c51bf;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+footer .socials a:hover {
+  color: #2c3a87;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .thumb-card {
+    flex: 0 0 100%;
+  }
+
+  .testimonial-slider {
+    flex-direction: column;
+  }
 }
