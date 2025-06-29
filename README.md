@@ -1,4 +1,4 @@
-# ThumbFolio – YouTube Thumbnail Portfolio by Sandip Gurung 🎨
+# ThumbFolio – YouTube Thumbnail Portfolio by Sandipeyy 🎨
 
 A clean, responsive portfolio showcasing custom YouTube thumbnails across categories like Vlog, Gaming, Music, Podcast, and more.
 
@@ -17,8 +17,8 @@ A clean, responsive portfolio showcasing custom YouTube thumbnails across catego
 ## Contact
 
 Interested in working together?  
-📬 [Send a message](https://formspree.io/f/xqabwvel) via the contact form
+📬 [Send a message](https://formspree.io/f/xeokavoz) via the contact form
 
 ---
 
-© 2025 Sandip Gurung — All rights reserved.
+© 2025 Sandipeyy — All rights reserved.
